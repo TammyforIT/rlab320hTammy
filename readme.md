@@ -1,0 +1,1 @@
+TodoReducer is the producer reducer. Producers mutate, and Immer helps immute. Add todos. Delete todos. Toggle is the route used when items get marked as completed. The edit mode is saved in React state, so it doesn’t persist — it’s an edit state that becomes a saved state only when the user clicks Save. unshift is used to add new entries to the top.
