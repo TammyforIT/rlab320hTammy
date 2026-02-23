@@ -1,13 +1,16 @@
 import React from "https://esm.sh/react";
 import { useTodos } from "./reducer.js";
-import NewTodoForm from "./NewTodoForm.js";
-import TodoItem from "./TodoItem.js";
+import todo from "./todo.js";
+import TodoItem from "./todoitem.js";
+import Stars from "./stars.js"; 
 
 export default function App() {
   const [todos, dispatch] = useTodos();
 
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: 20, position: "relative" }}>
+      <Stars />  {/* ← stars appear behind everything */}
+
       <h1>Todo List</h1>
 
       <NewTodoForm dispatch={dispatch} />
