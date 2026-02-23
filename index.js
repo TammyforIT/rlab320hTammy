@@ -1,7 +1,7 @@
 import React from "https://esm.sh/react";
 import { createRoot } from "https://esm.sh/react-dom/client";
 import App from "./app.js";
-import "./styles.css";
+import "./stars.js";
 
 
 const root = createRoot(document.getElementById("root"));
