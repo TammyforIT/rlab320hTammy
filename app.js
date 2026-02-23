@@ -1,6 +1,6 @@
-import React from "https://esm.sh/react";
+import React from "https://esm.sh/react@18.2.0";
 import { useTodos } from "./reducer.js";
-import NewTodoForm from "./todo.js";      // ← FIXED
+import NewTodoForm from "./todo.js";
 import TodoItem from "./todoitem.js";
 import Stars from "./stars.js";
 
@@ -13,7 +13,7 @@ export default function App() {
 
       <h1>Todo List</h1>
 
-      <NewTodoForm dispatch={dispatch} />   {/* ← FIXED */}
+      <NewTodoForm dispatch={dispatch} />
 
       {todos.map(todo => (
         <TodoItem key={todo.id} todo={todo} dispatch={dispatch} />
