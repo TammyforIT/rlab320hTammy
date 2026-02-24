@@ -1,4 +1,4 @@
-import { useImmerReducer } from "https://esm.sh/use-immer";
+import { useImmerReducer } from "use-immer";
 
 export function useTodos() {
   return useImmerReducer(todoReducer, []);
