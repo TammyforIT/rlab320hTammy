@@ -1,4 +1,4 @@
-import React, { useState } from "https://esm.sh/react@18.2.0";
+import React, { useState } from "react";
 
 export default function NewTodoForm({ dispatch }) {
   const [text, setText] = useState("");
