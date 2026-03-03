@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
-export default function NewTodoForm({ dispatch }) {
+export default function NewTodoForm({ update }) {
   const [text, setText] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (!text.trim()) return;
-    dispatch({ type: "add", title: text });
+    if (text.trim() === "") return;
+
+    update({ add: text });
     setText("");
   }
 
@@ -15,7 +16,7 @@ export default function NewTodoForm({ dispatch }) {
       <input
         value={text}
         onChange={e => setText(e.target.value)}
-        placeholder="New todo"
+        placeholder="Add a todo"
       />
       <button>Add</button>
     </form>
