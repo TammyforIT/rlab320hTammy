@@ -1,11 +1,11 @@
 import React from "react";
-import { useTodos } from "./reducer.js";
+import { useTodos } from "./todosState.js";
 import NewTodoForm from "./todo.js";
 import TodoItem from "./todoitem.js";
 import Stars from "./stars.js";
 
 export default function App() {
-  const [todos, dispatch] = useTodos();
+  const [todos, update] = useTodos();
 
   return (
     <div style={{ padding: 20, position: "relative" }}>
@@ -13,10 +13,10 @@ export default function App() {
 
       <h1>Todo List</h1>
 
-      <NewTodoForm dispatch={dispatch} />
+      <NewTodoForm update={update} />
 
       {todos.map(todo => (
-        <TodoItem key={todo.id} todo={todo} dispatch={dispatch} />
+        <TodoItem key={todo.id} todo={todo} update={update} />
       ))}
     </div>
   );
