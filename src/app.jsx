@@ -1,8 +1,11 @@
 import React from "react";
+import "./stars.css";    
+import "./App.css";       
+
+import Stars from "./stars.jsx";
 import { useTodos } from "./todostate.jsx";
 import NewTodoForm from "./todo.jsx";
 import TodoItem from "./todoitem.jsx";
-import Stars from "./stars.jsx";
 
 export default function App() {
   const [todos, update] = useTodos();
@@ -10,6 +13,7 @@ export default function App() {
   return (
     <div>
       <Stars />
+
       <h1>Todo List</h1>
 
       <NewTodoForm update={update} />
