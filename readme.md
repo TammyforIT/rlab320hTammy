@@ -1,18 +1,16 @@
-# React Todo List
+# React + Vite
 
-A simple React todo list built with useImmerReducer. You can add todos, edit them, mark them complete, and delete them when they’re finished. New todos appear at the top. Inputs are controlled, and buttons change based on the todo’s state.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
-- Add new todos
-- Check off completed todos
-- Edit todo text
-- Save edits
-- Delete only when complete
-- New items go to the top
+Currently, two official plugins are available:
 
-## State
-useImmerReducer handles all todo actions. useState is used for input fields.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Run
-npm install  
-npm run dev
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
